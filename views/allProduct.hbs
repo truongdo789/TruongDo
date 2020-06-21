@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/mystyle.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>All products</h1>
+    <h1><a href="/product/insert">Add product</a></h1>
+    <div class="container">
+
+        <div class="left"></div>
+        <div style="width: 100%;">
+
+            <table>
+
+                <tr>
+                    <td>ID</td>
+                    <td>Product ID</td>
+                    <td>Name</td>
+                    <td>Image</td>
+                    <td>Price</td>
+                    <td>Note</td>
+                    <td>Old Price</td>
+                    <td>Delete</td>
+
+                </tr>
+                {{#each product}}
+                <tr>
+                    <td><input type="text" name="id" value="{{_id}}"></td>
+                    <td><input type="text" name="pid" value="{{ProductId}}"></td>
+                    <td><input type="text" name="pname" value="{{ProductName}}"></td>
+                    <td><input type="text" name="pimg" value="{{Image}}"></td>
+                    <td><input type="text" name="price" value="{{Price}}"></td>
+                    <td><input type="text" name="pnote" value="{{Note}}"></td>
+                    <td><input type="text" name="oldPrime" value="{{oldprice}}"></td>
+
+                    <td><a href="/product/delete?id={{_id}}">Delete</a></Td>
+                </tr>
+                {{/each}}
+            </table>
+
+        </div>
+    </div>
+</body>
+
+</html>
